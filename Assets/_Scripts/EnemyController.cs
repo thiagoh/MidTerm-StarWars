@@ -53,10 +53,39 @@ public class EnemyController : MonoBehaviour {
         gameObject.GetComponent<Transform>().position = resetPosition;
     }
 
-    public void OnTriggerEnter(Collider other) {
-
+    public void OnCollisionEnter(Collision other) {
+        print("OnCollisionEnter");
         if (other.gameObject.CompareTag("DeathPlane")) {
-            playerController.earnHullPoints(10);
+            playerController.earnScorePoints(10);
+        }
+    }
+
+    public void OnCollisionEnter2D(Collision2D other) {
+        print("OnCollisionEnter2D");
+        if (other.gameObject.CompareTag("DeathPlane")) {
+            playerController.earnScorePoints(10);
+        }
+    }
+
+    public void OnCollisionStay(Collision collision) {
+        print("OnCollisionStay");
+    }
+
+    public void OnCollisionStay2D(Collision2D collision) {
+        print("OnCollisionStay2D");
+    }
+
+    public void OnTriggerEnter(Collider other) {
+        print("OnTriggerEnter");
+        if (other.gameObject.CompareTag("DeathPlane")) {
+            playerController.earnScorePoints(10);
+        }
+    }
+
+    public void OnTriggerEnter2D(Collider2D other) {
+        print("OnTriggerEnter2D");
+        if (other.gameObject.CompareTag("DeathPlane")) {
+            playerController.earnScorePoints(10);
         }
     }
 }

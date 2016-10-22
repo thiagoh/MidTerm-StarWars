@@ -78,4 +78,23 @@ public class PlayerController : MonoBehaviour {
         }
     }
 
+    public void OnTriggerEnter2D(Collider2D collision) {
+        Debug.Log("OnTriggerEnter2D");
+        print("OnTriggerEnter2D");
+    }
+
+    public void OnTriggerEnter(Collider other) {
+        Debug.Log("OnTriggerEnter");
+        print("OnTriggerEnter");
+    }
+
+    public void OnCollisionEnter(Collision collision) {
+        Debug.Log("OnCollisionEnter");
+        print("OnCollisionEnter");
+    }
+
+    public void OnCollisionEnter2D(Collision2D collision) {
+        Debug.Log("OnCollisionEnter2D");
+        print("OnCollisionEnter2D");
+    }
 }

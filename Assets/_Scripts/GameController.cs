@@ -57,7 +57,10 @@ public class GameController : MonoBehaviour {
         }
     }
 
-    public  void gameOver() {
+    public void restartGame() {
+
+    }
+    public void gameOver() {
         this.GameOverLabel.gameObject.SetActive(true);
         this.FinalScoreLabel.text = "Final Score: " + playerController.getScore();
         this.FinalScoreLabel.gameObject.SetActive(true);
