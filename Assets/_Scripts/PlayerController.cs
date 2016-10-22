@@ -19,6 +19,8 @@ public class PlayerController : MonoBehaviour {
     public Camera camera;
     // hurt sound
     public AudioSource hurtSound;
+    // move sound
+    public AudioSource moveSound;
     // win points
     public AudioSource winPointsSound;
 
@@ -64,10 +66,14 @@ public class PlayerController : MonoBehaviour {
 
         if (move > 0) {
             _newPosition.x += speed; // add move value to current position
+        } else if (move < 0) {
+            _newPosition.x -= speed; // subtract move value to current position
         }
 
-        if (move < 0) {
-            _newPosition.x -= speed; // subtract move value to current position
+        if (Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.D) || Input.GetKey(KeyCode.RightArrow) || Input.GetKey(KeyCode.LeftArrow)) {
+            if (!moveSound.isPlaying) {
+                moveSound.Play();
+            }
         }
 
         boundaryCheck();

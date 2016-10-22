@@ -73,7 +73,9 @@ public class EnemyController : MonoBehaviour {
         }
         // if the enemy reaches the Player, the player lose a hull point
         if (other.gameObject.CompareTag("Player")) {
-            playerController.loseHullPoint();
+            if (playerController != null) {
+                playerController.loseHullPoint();
+            }
         }
     }
 }
