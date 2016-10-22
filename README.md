@@ -1,5 +1,7 @@
 # MidTerm-StarWars
 
+<img src="https://github.com/thiagoh/MidTerm-StarWars/raw/master/Assets/specs/shot1.PNG" />
+
  - ACHIEVED!: This	exam	will	be	conducted	like	a	Game	Jam – The	first	person	who	completes	the	exam	will	
 gain	a	5-point	bonus
 
